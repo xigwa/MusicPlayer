@@ -1,10 +1,13 @@
 package org.example;
 
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
-        MusicFile musicFile = new MusicFile();
-        // Относительный путь к файлу в папке resources
-        musicFile.playMusic("Music/Teya_Dora_Dzanum.mp3");
-        //
+        SwingUtilities.invokeLater(() -> {
+            Ui ui = new Ui();
+            ui.createAndShowGUI();
+            ui.addToPlaylist("Music/Night_Lovell_Still_Cold_Cotneus_Remix_2023.mp3");
+        });
     }
 }
